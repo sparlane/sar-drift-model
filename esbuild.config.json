@@ -1,6 +1,8 @@
 {
     "entry": [
-        "frontend/main.tsx"
+        "frontend/main.tsx",
+        "frontend/tides/locations.tsx",
+        "frontend/tides/tide_data.tsx"
     ],
     "bundle": true,
     "minify": false,

@@ -12,6 +12,20 @@ class TideLocation(models.Model):
     description = models.TextField(null=True, blank=True)
     location = models.PointField(geography=True)
 
+    def as_object(self):
+        """
+        Return an object representing this tide location
+        """
+        return {
+            'id': self.pk,
+            'name': self.name,
+            'description': self.description,
+            'location': {
+                'latitude': self.location.y,   # pylint: disable=E1101
+                'longitude': self.location.x   # pylint: disable=E1101
+            }
+        }
+
 
 class TideData(models.Model):
     """
@@ -20,7 +34,18 @@ class TideData(models.Model):
     location = models.ForeignKey(TideLocation, on_delete=models.CASCADE)
     high = models.BooleanField()
     height = models.DecimalField(decimal_places=3, max_digits=6)
-    timestamp = models.DateTimeField()
+    occurs = models.DateTimeField()
+
+    def as_object(self):
+        """
+        Return an object representing this tide data
+        """
+        return {
+            'id': self.pk,
+            'high': self.high,
+            'height': self.height,
+            'occurs': self.occurs
+        }
 
     class Meta:
         """
@@ -28,5 +53,5 @@ class TideData(models.Model):
         """
         # pylint: disable=R0903
         indexes = [
-            models.Index(fields=['location', 'timestamp']),
+            models.Index(fields=['location', 'occurs']),
         ]
