@@ -1,0 +1,42 @@
+{
+  "name": "sar-drift-model",
+  "version": "1.0.0",
+  "main": "frontend/main.js",
+  "scripts": {
+    "check": "eslint frontend/ && prettier -c frontend/",
+    "build-only": "esbuild $(esbuild-config)",
+    "build": "esbuild $(esbuild-config) && cp -dpR dist/* main/static/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparlane/sar-drift-model"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "leaflet": "^1.9.4",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^19.0.0",
+    "react-leaflet": "^5.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "esbuild-config": "^1.0.1",
+    "@eslint/js": "^9.20.0",
+    "@types/jquery": "^3.5.32",
+    "@types/leaflet": "^1.9.15",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.19.0",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.14.0",
+    "prettier": "^3.5.0",
+    "typescript": "5.7.3",
+    "typescript-eslint": "8.24.0"
+  }
+}

@@ -1,0 +1,6 @@
+__pycache__/
+node_modules/
+.vscode/
+/dist/
+sdm/local_settings.py
+sdm/secretkey.txt

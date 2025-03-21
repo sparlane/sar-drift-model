@@ -1,0 +1,13 @@
+{
+    "entry": [
+        "frontend/main.tsx"
+    ],
+    "bundle": true,
+    "minify": false,
+    "outdir": "dist",
+    "loader": {
+        ".png": "file",
+        ".ttf": "file",
+        ".woff2": "file"
+    }
+}
