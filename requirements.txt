@@ -3,7 +3,7 @@ django==5.1.7
 psycopg[binary,pool]==3.2.6
 
 # Code checking
-pycodestyle==2.12.1
+pycodestyle==2.13.0
 pylint==3.3.*
 pylint-django==2.6.1
 isort==6.0.1
