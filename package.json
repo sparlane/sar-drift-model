@@ -29,7 +29,7 @@
     "esbuild-config": "^1.0.1",
     "@eslint/js": "^9.25.1",
     "@types/jquery": "^3.5.32",
-    "@types/leaflet": "^1.9.17",
+    "@types/leaflet": "^1.9.18",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
     "eslint": "^9.26.0",
