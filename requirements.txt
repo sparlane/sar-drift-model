@@ -1,6 +1,6 @@
 django==6.1.3
 
-psycopg[binary,pool]==3.3.8
+psycopg[binary,pool]==3.3.9
 
 # Code checking
 pycodestyle==2.15.0
